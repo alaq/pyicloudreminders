@@ -6,15 +6,15 @@ with open('requirements.txt') as f:
 
 
 setup(
-    name='pyicloud',
-    version='0.9.1',
-    url='https://github.com/picklepete/pyicloud',
+    name='pyicloudreminders',
+    version='0.1.0',
+    url='https://github.com/coumbole/pyicloudreminders',
     description=(
-        'PyiCloud is a module which allows pythonistas to '
-        'interact with iCloud webservices.'
+        'PyiCloudReminders is a module which allows pythonistas to '
+        'interact with iCloud Reminders.'
     ),
-    maintainer='The PyiCloud Authors',
-    maintainer_email=' ',
+    maintainer='The PyiCloud + PyiCloudReminders Authors',
+    maintainer_email='',
     license='MIT',
     packages=find_packages(),
     install_requires=required,
