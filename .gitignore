@@ -1,5 +1,7 @@
 *.py[cod]
 
+pip-selfcheck.json
+
 # C extensions
 *.so
 
