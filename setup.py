@@ -10,8 +10,8 @@ setup(
     version='0.1.0',
     url='https://github.com/coumbole/pyicloudreminders',
     description=(
-        'PyiCloudReminders is a module which allows pythonistas to '
-        'interact with iCloud Reminders.'
+        'PyiCloudReminders is a module (a fork of pyicloud) which'
+        'allows pythonistas to interact with iCloud Reminders.'
     ),
     maintainer='The PyiCloud + PyiCloudReminders Authors',
     maintainer_email='',
