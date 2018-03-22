@@ -17,13 +17,7 @@ from pyicloud.exceptions import (
     PyiCloudServiceNotActivatedErrror
 )
 from pyicloud.services import (
-    FindMyiPhoneServiceManager,
-    CalendarService,
-    UbiquityService,
-    ContactsService,
-    RemindersService,
-    PhotosService,
-    AccountService
+    RemindersService
 )
 from pyicloud.utils import get_password_from_keyring
 
@@ -286,61 +280,6 @@ class PyiCloudService(object):
         self.authenticate()
 
         return not self.requires_2sa
-
-    @property
-    def devices(self):
-        """ Return all devices."""
-        service_root = self.webservices['findme']['url']
-        return FindMyiPhoneServiceManager(
-            service_root,
-            self.session,
-            self.params
-        )
-
-    @property
-    def account(self):
-        service_root = self.webservices['account']['url']
-        return AccountService(
-            service_root,
-            self.session,
-            self.params
-        )
-
-    @property
-    def iphone(self):
-        return self.devices[0]
-
-    @property
-    def files(self):
-        if not hasattr(self, '_files'):
-            service_root = self.webservices['ubiquity']['url']
-            self._files = UbiquityService(
-                service_root,
-                self.session,
-                self.params
-            )
-        return self._files
-
-    @property
-    def photos(self):
-        if not hasattr(self, '_photos'):
-            service_root = self.webservices['ckdatabasews']['url']
-            self._photos = PhotosService(
-                service_root,
-                self.session,
-                self.params
-            )
-        return self._photos
-
-    @property
-    def calendar(self):
-        service_root = self.webservices['calendar']['url']
-        return CalendarService(service_root, self.session, self.params)
-
-    @property
-    def contacts(self):
-        service_root = self.webservices['contacts']['url']
-        return ContactsService(service_root, self.session, self.params)
 
     @property
     def reminders(self):
