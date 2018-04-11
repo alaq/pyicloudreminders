@@ -14,7 +14,7 @@ setup(
         'allows pythonistas to interact with iCloud Reminders.'
     ),
     maintainer='The PyiCloud + PyiCloudReminders Authors',
-    maintainer_email='',
+    maintainer_email='ville@kumpulainen.org',
     license='MIT',
     packages=find_packages(),
     install_requires=required,
