@@ -108,13 +108,13 @@ class RemindersService(object):
                     "order": None,
                     "priority": 0,
                     "recurrence": None,
-                    "alarms": [
+                    "alarms": [{
                         "messageType": "message",
                         "pGuid": pguid,
                         "guid": str(uuid.uuid4()),
                         "isLocationBased": false,
                         "onDate": dueDateList 
-                    ],
+                    }],
                     "startDate": None,
                     "startDateTz": None,
                     "startDateIsAllDay": False,
