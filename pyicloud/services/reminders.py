@@ -112,7 +112,7 @@ class RemindersService(object):
                         "messageType": "message",
                         "pGuid": pguid,
                         "guid": str(uuid.uuid4()),
-                        "isLocationBased": false,
+                        "isLocationBased": False,
                         "onDate": dueDateList 
                     }],
                     "startDate": None,
